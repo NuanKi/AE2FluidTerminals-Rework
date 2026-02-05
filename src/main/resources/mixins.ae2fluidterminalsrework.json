@@ -1,0 +1,13 @@
+{
+  "package": "me.emvoh.ae2fluidterminalsrework.mixin",
+  "refmap": "mixins.ae2fluidterminalsrework.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [
+    "MixinContainerMEPortableFluidCell",
+    "MixinContainerFluidTerminal"
+  ],
+  "server": []
+}
