@@ -41,9 +41,6 @@ public abstract class MixinContainerMEPortableFluidCell {
     @Shadow @Final
     private int slot;
 
-    @Shadow
-    public abstract void detectAndSendChanges();
-
     @Unique
     private IEnergySource asg$getPowerSource() {
         return ((AEBaseContainer) (Object) this).getPowerSource();
@@ -204,7 +201,7 @@ public abstract class MixinContainerMEPortableFluidCell {
                 asg$updateHeld(player);
             } else {
                 player.inventory.markDirty();
-                this.detectAndSendChanges();
+                this.asg$detectAndSendChanges();
             }
 
             return;
@@ -314,4 +311,10 @@ public abstract class MixinContainerMEPortableFluidCell {
 
         return -1;
     }
+
+    @Unique
+    private void asg$detectAndSendChanges() {
+        ((AEBaseContainer) (Object) this).detectAndSendChanges();
+    }
+
 }
