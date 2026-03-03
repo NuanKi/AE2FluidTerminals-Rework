@@ -8,6 +8,8 @@
 
 Quality of life improvements for AE2 fluid terminals that reduce clicks and make common actions smoother.
 
+- See full release history in [`CHANGELOG.md`](CHANGELOG.md)
+
 ## CurseForge
 https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-terminals-rework
 
