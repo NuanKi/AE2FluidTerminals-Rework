@@ -2,6 +2,7 @@
 [![MCVersion](http://cf.way2muchnoise.eu/versions/1454405.svg)](https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-terminals-rework)
 [![GitHub issues](https://img.shields.io/github/issues/NuanKi/AE2FluidTerminals-Rework.svg)](https://github.com/NuanKi/AE2FluidTerminals-Rework/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/NuanKi/AE2FluidTerminals-Rework.svg)](https://github.com/NuanKi/AE2FluidTerminals-Rework/pulls)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 # AE2 Fluid Terminals Rework
 
@@ -46,4 +47,4 @@ Typical workflow:
 Issues and pull requests are welcome. If you submit a PR, keep changes focused and include a short description of what changed and why.
 
 ## License
-MIT (see `LICENSE`).
+MIT (see [`LICENSE`](LICENSE)).
