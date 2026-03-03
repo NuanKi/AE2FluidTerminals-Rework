@@ -1,0 +1,6 @@
+chat.ae2fluidterminalsrework.wireless_drain.out_of_range_not_linked=Out of range / not linked
+chat.ae2fluidterminalsrework.wireless_drain.no_fluid_storage_access=No fluid storage access
+chat.ae2fluidterminalsrework.wireless_drain.network_cant_accept=Network can't accept that fluid
+chat.ae2fluidterminalsrework.wireless_drain.drain_failed=Drain failed
+chat.ae2fluidterminalsrework.wireless_drain.insert_failed=Insert failed
+chat.ae2fluidterminalsrework.wireless_drain.stored=Stored %d mB of %s
