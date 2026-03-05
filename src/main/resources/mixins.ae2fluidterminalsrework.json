@@ -5,12 +5,14 @@
   "minVersion": "0.8",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MixinToolWirelessFluidTerminal",
-    "MixinItemWirelessUniversalTerminal"
+    "common.MixinToolWirelessFluidTerminal",
+    "common.MixinItemWirelessUniversalTerminal"
   ],
   "client": [
-    "MixinContainerMEPortableFluidCell",
-    "MixinContainerFluidTerminal"
+    "client.MixinContainerMEPortableFluidCell",
+    "client.MixinContainerFluidTerminal",
+    "client.MixinGuiFluidTerminal",
+    "client.MixinGuiMEPortableFluidCell"
   ],
   "server": []
 }

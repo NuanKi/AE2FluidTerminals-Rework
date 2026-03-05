@@ -1,4 +1,4 @@
-package me.emvoh.ae2fluidterminalsrework.mixin;
+package me.emvoh.ae2fluidterminalsrework.mixin.common;
 
 import com.circulation.ae2wut.item.ItemWirelessUniversalTerminal;
 import me.emvoh.ae2fluidterminalsrework.helper.WirelessFluidDrainHelper;
@@ -15,6 +15,7 @@ import net.minecraft.world.World;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -25,6 +26,7 @@ public abstract class MixinItemWirelessUniversalTerminal extends ToolWirelessTer
     @Shadow
     public abstract boolean hasMode(ItemStack t, byte mode);
 
+    @Unique
     private static final byte FLUID_MODE = 2;
 
     @SuppressWarnings("UnresolvedMixinReference")

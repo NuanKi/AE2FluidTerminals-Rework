@@ -1,4 +1,4 @@
-package me.emvoh.ae2fluidterminalsrework.mixin;
+package me.emvoh.ae2fluidterminalsrework.mixin.common;
 
 import appeng.api.AEApi;
 import appeng.items.tools.powered.ToolWirelessFluidTerminal;
@@ -11,11 +11,13 @@ import net.minecraft.util.*;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(value = ToolWirelessFluidTerminal.class, remap = false)
 public abstract class MixinToolWirelessFluidTerminal extends ToolWirelessTerminal {
 
+    @NotNull
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         final ItemStack stack = player.getHeldItem(hand);
