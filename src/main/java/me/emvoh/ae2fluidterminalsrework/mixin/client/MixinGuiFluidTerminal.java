@@ -28,16 +28,12 @@ public abstract class MixinGuiFluidTerminal {
     )
     private void ae2fluidterminalsrework$shiftClickFluidFillsAll(Slot slot, int slotIdx, int mouseButton, ClickType clickType, CallbackInfo ci) {
         if (!(slot instanceof SlotFluidME meSlot)) return;
-
-        // Shift-click == QUICK_MOVE
         if (clickType != ClickType.QUICK_MOVE) return;
 
-        if (mouseButton != 0) return; // only left-click
+        if (mouseButton != 0) return;
         if (!meSlot.getHasStack()) return;
 
         this.container.setTargetStack(meSlot.getAEFluidStack());
-
-        // id=1 => "fill all containers"
         NetworkHandler.instance().sendToServer(new PacketInventoryAction(InventoryAction.FILL_ITEM, slot.slotNumber, 1L));
 
         ci.cancel();

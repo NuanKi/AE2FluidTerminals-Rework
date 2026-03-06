@@ -24,6 +24,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.capability.IFluidHandler;
+import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
+
 
 import java.util.Optional;
 
@@ -58,9 +61,11 @@ public final class WirelessFluidDrainHelper {
         }
 
         final WirelessTerminalGuiObject wto = new WirelessTerminalGuiObject(item, terminalStack, player, world, slot, 0, 0);
-        if (!wto.rangeCheck() || wto.getActionableNode() == null) {
+        if (!wto.rangeCheck()) {
             sendStatus(player, true, TextFormatting.RED, "chat.ae2fluidterminalsrework.wireless_drain.out_of_range_not_linked");
             return Outcome.FAILED;
+        } else {
+            wto.getActionableNode();
         }
 
         final IFluidStorageChannel chan = AEApi.instance().storage().getStorageChannel(IFluidStorageChannel.class);
@@ -115,18 +120,21 @@ public final class WirelessFluidDrainHelper {
             this.host = host;
         }
 
+        @NotNull
         @Override
         public Optional<EntityPlayer> player() {
             return Optional.ofNullable(player);
         }
 
+        @Nonnull
         @Override
         public Optional<IActionHost> machine() {
             return Optional.ofNullable(host);
         }
 
+        @NotNull
         @Override
-        public Optional<Object> context(final Class key) {
+        public <T> Optional<T> context(@NotNull final Class<T> key) {
             return Optional.empty();
         }
     }

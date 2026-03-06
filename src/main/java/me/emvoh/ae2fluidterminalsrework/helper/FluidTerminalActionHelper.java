@@ -94,32 +94,25 @@ public final class FluidTerminalActionHelper {
                     continue;
                 }
 
-                if (s.getCount() == 1) {
-                    while (true) {
-                        final int res = fillOnceFromInvSlot(player, idx, monitor, power, actionSource, request, lockedSlot);
-                        if (res > 0) {
-                            changed = true;
-                            continue;
-                        }
-                        if (res == 0) {
-                            break;
-                        }
-                        // res < 0: ME can't provide fluid or power, stop early
-                        return changed;
+                final int originalCount = s.getCount();
+                final boolean singleStack = (originalCount == 1);
+
+                // If it's a single container item (tank), keep filling until it can't accept more.
+                // If it's a stack of containers, try at most the original stack size.
+                for (int i = 0; singleStack || i < originalCount; i++) {
+                    final int res = fillOnceFromInvSlot(player, idx, monitor, power, actionSource, request, lockedSlot);
+
+                    if (res > 0) {
+                        changed = true;
+                        continue;
                     }
-                } else {
-                    final int originalCount = s.getCount();
-                    for (int i = 0; i < originalCount; i++) {
-                        final int res = fillOnceFromInvSlot(player, idx, monitor, power, actionSource, request, lockedSlot);
-                        if (res > 0) {
-                            changed = true;
-                            continue;
-                        }
-                        if (res == 0) {
-                            break;
-                        }
-                        return changed;
+
+                    if (res == 0) {
+                        break;
                     }
+
+                    // res < 0: ME can't provide fluid or power, stop early
+                    return changed;
                 }
             }
         }
