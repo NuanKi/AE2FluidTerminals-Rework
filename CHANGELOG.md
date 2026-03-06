@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.5]
+
+### Added
+- Mass-fill containers: Shift + Click a fluid inside the Fluid Terminal to fill all compatible empty containers in the player's inventory with that fluid.
+- New `FluidTerminalActionHelper` to better handle fluid pickup and storage logic.
+
+### Changed
+- Refactored fluid terminal mixins and helpers for consistency and improved fluid handling logic.
+- Restructured mixin package hierarchy for better code organization, moving client-side mixins to a dedicated `client` sub-package.
+
 ## [1.1.2]
 
 ### Changed
@@ -28,8 +38,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial publish.
 
-[Unreleased]: https://github.com/NuanKi/AE2FluidTerminals-Rework/compare/v1.1.2...HEAD
-[1.0.0]: https://github.com/NuanKi/AE2FluidTerminals-Rework/tree/v1.0.0
-[1.0.5]: https://github.com/NuanKi/AE2FluidTerminals-Rework/tree/v1.0.5
-[1.1.0]: https://github.com/NuanKi/AE2FluidTerminals-Rework/tree/v1.1.0
+[Unreleased]: https://github.com/NuanKi/AE2FluidTerminals-Rework/compare/v1.1.5...HEAD
+[1.1.5]: https://github.com/NuanKi/AE2FluidTerminals-Rework/tree/v1.1.5
 [1.1.2]: https://github.com/NuanKi/AE2FluidTerminals-Rework/tree/v1.1.2
+[1.1.0]: https://github.com/NuanKi/AE2FluidTerminals-Rework/tree/v1.1.0
+[1.0.5]: https://github.com/NuanKi/AE2FluidTerminals-Rework/tree/v1.0.5
+[1.0.0]: https://github.com/NuanKi/AE2FluidTerminals-Rework/tree/v1.0.0
