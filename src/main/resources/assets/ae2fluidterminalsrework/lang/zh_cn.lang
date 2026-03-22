@@ -1,0 +1,6 @@
+chat.ae2fluidterminalsrework.wireless_drain.out_of_range_not_linked=超出范围 / 未链接
+chat.ae2fluidterminalsrework.wireless_drain.no_fluid_storage_access=无法访问流体存储
+chat.ae2fluidterminalsrework.wireless_drain.network_cant_accept=网络无法接收该流体
+chat.ae2fluidterminalsrework.wireless_drain.drain_failed=取出失败
+chat.ae2fluidterminalsrework.wireless_drain.insert_failed=存入失败
+chat.ae2fluidterminalsrework.wireless_drain.stored=已存储 %d mB %s
